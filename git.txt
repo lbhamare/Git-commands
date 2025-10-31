@@ -1,0 +1,193 @@
+Roushan@DESKTOP-MB222ST MINGW64 ~/OneDrive/Desktop (main)
+$ mkdir u1-java-repo
+
+Roushan@DESKTOP-MB222ST MINGW64 ~/OneDrive/Desktop (main)
+$ cd u1-java-repo/
+
+Roushan@DESKTOP-MB222ST MINGW64 ~/OneDrive/Desktop/u1-java-repo (main)
+$ git init
+Initialized empty Git repository in C:/Users/Admin/OneDrive/Desktop/u1-java-repo/.git/
+
+Roushan@DESKTOP-MB222ST MINGW64 ~/OneDrive/Desktop/u1-java-repo (main)
+$ git config --global user.name "User1"
+
+Roushan@DESKTOP-MB222ST MINGW64 ~/OneDrive/Desktop/u1-java-repo (main)
+$ git config --global user.email "roushankr26@gmail.com"
+
+Roushan@DESKTOP-MB222ST MINGW64 ~/OneDrive/Desktop/u1-java-repo (main)
+$ git remote add origin https://github.com/Roushan-World/oct23-java-project.git
+
+Roushan@DESKTOP-MB222ST MINGW64 ~/OneDrive/Desktop/u1-java-repo (main)
+$ touch amit
+
+Roushan@DESKTOP-MB222ST MINGW64 ~/OneDrive/Desktop/u1-java-repo (main)
+$ git status
+On branch main
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        amit
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Roushan@DESKTOP-MB222ST MINGW64 ~/OneDrive/Desktop/u1-java-repo (main)
+$ git add .
+
+Roushan@DESKTOP-MB222ST MINGW64 ~/OneDrive/Desktop/u1-java-repo (main)
+$ git status
+On branch main
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   amit
+
+
+Roushan@DESKTOP-MB222ST MINGW64 ~/OneDrive/Desktop/u1-java-repo (main)
+$ git status
+On branch main
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   amit
+
+
+Roushan@DESKTOP-MB222ST MINGW64 ~/OneDrive/Desktop/u1-java-repo (main)
+$ git show
+fatal: your current branch 'main' does not have any commits yet
+
+Roushan@DESKTOP-MB222ST MINGW64 ~/OneDrive/Desktop/u1-java-repo (main)
+$ git commit -m "this is my java file"
+[main (root-commit) 661bfae] this is my java file
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 amit
+
+Roushan@DESKTOP-MB222ST MINGW64 ~/OneDrive/Desktop/u1-java-repo (main)
+$ git status
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   amit
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Roushan@DESKTOP-MB222ST MINGW64 ~/OneDrive/Desktop/u1-java-repo (main)
+$ git add amit
+
+Roushan@DESKTOP-MB222ST MINGW64 ~/OneDrive/Desktop/u1-java-repo (main)
+$ git status
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   amit
+
+
+Roushan@DESKTOP-MB222ST MINGW64 ~/OneDrive/Desktop/u1-java-repo (main)
+$ git commit amit -m "This is my java file"
+[main d48ae26] This is my java file
+ 1 file changed, 1 insertion(+)
+
+Roushan@DESKTOP-MB222ST MINGW64 ~/OneDrive/Desktop/u1-java-repo (main)
+$ git show
+commit d48ae262e3c83fbdad1e419601ef13e86944c295 (HEAD -> main)
+Author: User1 <roushankr26@gmail.com>
+Date:   Tue Oct 10 16:13:52 2023 +0530
+
+    This is my java file
+
+diff --git a/amit b/amit
+index e69de29..cc33bb1 100644
+--- a/amit
++++ b/amit
+@@ -0,0 +1 @@
++this is
+\ No newline at end of file
+
+Roushan@DESKTOP-MB222ST MINGW64 ~/OneDrive/Desktop/u1-java-repo (main)
+$ git branch
+* main
+
+Roushan@DESKTOP-MB222ST MINGW64 ~/OneDrive/Desktop/u1-java-repo (main)
+$ git add .
+
+Roushan@DESKTOP-MB222ST MINGW64 ~/OneDrive/Desktop/u1-java-repo (main)
+$ git status
+On branch main
+nothing to commit, working tree clean
+
+Roushan@DESKTOP-MB222ST MINGW64 ~/OneDrive/Desktop/u1-java-repo (main)
+$ git commit -m "my all file"
+On branch main
+nothing to commit, working tree clean
+
+Roushan@DESKTOP-MB222ST MINGW64 ~/OneDrive/Desktop/u1-java-repo (main)
+$ git commit list
+error: pathspec 'list' did not match any file(s) known to git
+
+Roushan@DESKTOP-MB222ST MINGW64 ~/OneDrive/Desktop/u1-java-repo (main)
+$ git status
+On branch main
+nothing to commit, working tree clean
+
+Roushan@DESKTOP-MB222ST MINGW64 ~/OneDrive/Desktop/u1-java-repo (main)
+$ git branch
+* main
+
+Roushan@DESKTOP-MB222ST MINGW64 ~/OneDrive/Desktop/u1-java-repo (main)
+$ git log
+commit d48ae262e3c83fbdad1e419601ef13e86944c295 (HEAD -> main)
+Author: User1 <roushankr26@gmail.com>
+Date:   Tue Oct 10 16:13:52 2023 +0530
+
+    This is my java file
+
+commit 661bfae94ad98e719905a289209a99250d4c3401
+Author: User1 <roushankr26@gmail.com>
+Date:   Tue Oct 10 16:12:17 2023 +0530
+
+    this is my java file
+
+Roushan@DESKTOP-MB222ST MINGW64 ~/OneDrive/Desktop/u1-java-repo (main)
+$ git show d48ae26
+commit d48ae262e3c83fbdad1e419601ef13e86944c295 (HEAD -> main)
+Author: User1 <roushankr26@gmail.com>
+Date:   Tue Oct 10 16:13:52 2023 +0530
+
+    This is my java file
+
+diff --git a/amit b/amit
+index e69de29..cc33bb1 100644
+--- a/amit
++++ b/amit
+@@ -0,0 +1 @@
++this is
+\ No newline at end of file
+
+Roushan@DESKTOP-MB222ST MINGW64 ~/OneDrive/Desktop/u1-java-repo (main)
+$ git push -u -f origin main
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (6/6), 431 bytes | 215.00 KiB/s, done.
+Total 6 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/Roushan-World/oct23-java-project.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+
+Roushan@DESKTOP-MB222ST MINGW64 ~/OneDrive/Desktop/u1-java-repo (main)
+$ git push -u -f origin main
+Everything up-to-date
+branch 'main' set up to track 'origin/main'.
+
+Roushan@DESKTOP-MB222ST MINGW64 ~/OneDrive/Desktop/u1-java-repo (main)
+$ ^C
+
+Roushan@DESKTOP-MB222ST MINGW64 ~/OneDrive/Desktop/u1-java-repo (main)
+$
